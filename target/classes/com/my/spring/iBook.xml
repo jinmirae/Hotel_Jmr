@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.my.spring.iBook">
+
+	<insert id="doInsertBook">
+		insert into book values(seq_bookcode.nextval,#{param1},#{param2},#{param3},#{param4},#{param5},#{param6},#{param7})
+	</insert>
+	
+	<select id="getAvailable" resultType="com.my.spring.Roominfo"><!-- 예약불가능리스트 -->
+		<![CDATA[
+		select a.roomcode,a.name roomname,b.name typename,a.howmany,a.howmuch
+		  from room a, roomtype b
+		 where roomcode in (
+		  select roomcode from room
+		  minus
+		 select distinct roomcode from book
+		  where checkout > #{param2} and checkin < #{param1}
+		 )
+		 and a.type=b.typecode
+ 		 ]]>
+	</select>
+	
+	<select id="getBookList" resultType="com.my.spring.Bookinfo"><!-- 예약가능리스트 -->
+		<![CDATA[
+		select a.bookcode,a.roomcode,b.name roomname,c.name typename,b.howmany,b.howmuch,a.checkin,a.checkout,a.total,a.booker,a.mobile
+  		  from book a,room b, roomtype c
+ 		 where a.checkout >= #{param2} and a.checkin <= #{param1}
+   		   and a.roomcode=b.roomcode
+   		   and b.type=c.typecode
+ 		 order by a.checkin
+ 		 ]]>
+	</select>
+	
+	<select id='doFindAvailable'>
+		
+	</select>
+	
+</mapper>

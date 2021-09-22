@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객실관리</title>
+    <link href="room.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div id="gnav">
+                <ul class="menu">
+                    <li><a class="link1" href="room.html">객실관리</a></li>
+                    <li><a class="link2" href="reserve.html">예약관리</a></li>
+                </ul>
+             </div><!--gnav-->
+        </header>
+    
+        <main>
+            <div class="space">
+                <table class="space_table">
+                    <tr>
+                        <th>숙박기간</th>
+                        <td><input type="date"><br>~<br><input type="date"></td>
+                    </tr>
+                    <tr>
+                        <th class="bunlyu">객실분류</th>
+                        <td>
+                            <select name="possible_day">
+                                <option value="" selected>객실을 선택해 주세요.</option>
+                                <option value="Suite Room">Suite Room</option>
+                                <option value="Family Room">Family Room</option>
+                                <option value="Double Room">Double Room</option>
+                                <option value="Single Room">Single Room</option>
+                                <option value="Domitory">Domitory</option>
+                                </select>
+                                <input id="search" type="submit" value="찾기">
+                        </td>
+                    </tr>
+                </table>
+                <div class="possible_list">
+                        <h2>예약가능</h2>
+                            <select size="7" name="pref" multiple>
+                                <option value="" selected>객실을 선택해 주세요.</option>
+                                <option value="Suite Room">백두산 Suite Room</option>
+                                <option value="Family Room">한라산 Family Room</option>
+                                <option value="Double Room">태조산 Double Room</option>
+                                <option value="Single Room">흑성산 Single Room</option>
+                                </select>
+                </div><!-- possible_list -->
+            </div><!-- space -->
+
+
+            <div class="choicesystem">
+                <div class="loom_choice">
+                    <table class="choices">
+                        <tr>
+                            <th>객실이름</th>
+                            <td><input type="text" name="loom_name" size="20"></td>
+                        </tr>
+                        <tr>
+                            <th class="bunlyu">숙박기간</th>
+                            <td><input id="bunlyu1" type="date">~<input id="bunlyu2" type="date"> (N박)</td>
+                        </tr>
+                        <tr>
+                            <th>숙박가능인원</th>
+                            <td><input type="number" name="a1" size="20"> 명</td>
+                        </tr>
+                        <tr>
+                            <th>1박비용</th>
+                            <td><input type="text" name="a1" size="20"> 원</td>
+                        </tr>
+                        <tr>
+                            <th>총 숙박비</th>
+                            <td><input type="text" name="a1" size="20"> 원</td>
+                        </tr>
+                        <tr>
+                            <th>예약자 모바일</th>
+                            <td><input type="text" name="a1" size="20"></td>
+                        </tr>
+                    </table>
+                </div><!-- loom_choice -->
+                <div class="btns">
+                    <input type="reset" value="등록" class="btn btn-check">
+                    <input type="submit" value="삭제" class="btn btn-delete">
+                    <input type="submit" value="초기화" class="btn btn-clear">
+                </div><!-- btns -->
+            </div><!-- choicesystem -->
+
+
+            <div class="impossible_list">
+                <h2>예약불가능</h2>
+                    <select size="7" name="pref" multiple>
+                        <option value="" selected>객실을 선택해 주세요.</option>
+                        <option value="Suite Room">백두산 Suite Room</option>
+                        <option value="Family Room">한라산 Family Room</option>
+                        <option value="Double Room">태조산 Double Room</option>
+                        <option value="Single Room">흑성산 Single Room</option>
+                        </select>
+            </div><!--  impossible_list -->
+
+        </main>
+
+        </div><!--container -->
+</body>
+</html>

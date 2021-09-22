@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*--container영역--*/
+#container{
+	width:1280px;
+	height:650px;
+	text-align:left;
+	overflow:hidden;
+	background-image: url(water-3292794_1280.jpg);
+}
+
+/*--header영역--*/
+#header {
+	width:1920px;
+	height:40px;
+	display:table-cell;
+	vertical-align:middle;
+}
+#gnav {
+	font-size: 14px;
+	width: 1920px;
+	}
+	
+#gnav .menu:after {
+	content:"";
+	display:block;
+	clear:both;
+	}
+
+#gnav .menu > li {
+	float:left;
+}
+
+#gnav .menu li a {
+	display:block;
+    width: 110px;
+	height: 30px;
+	text-align:center;
+	color:black;
+    padding-top: 21px;
+	text-decoration: blueviolet;
+	}
+
+#gnav .menu { position:relative; }
+
+#gnav .menu a:hover { 
+    color:rgb(160, 160, 160);
+}
+
+
+/*--main영역--*/
+main{
+	clear:both;
+}
+ 
+/*--nav영역--*/
+.nav {
+    width: 244px;
+    height: 500px;
+	border: 1px black solid;
+    display: block;
+    float: left;
+	background-color: rgba(1, 0, 73, 0.829);
+}
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+    width: 200px;
+    height: 20px;
+    color:white;
+    padding: 16px 25px 10px 25px;
+    text-align: left;
+}
+.nav li a {
+	display:block;
+    width: 200px;
+	height: 10px;
+    font-size: 14px;
+	text-align: left;
+	font-weight: 500;
+	color:white;
+    padding: 18px 25px 10px 25px;
+	}
+.nav a:hover {
+    opacity: 0.7;
+}
+
+/*--choicesystem영역--*/
+.choicesystem {
+    width: 800px;
+    height: 500px;
+    padding-left: 30px;
+    margin-left: 80px;
+    float: left;
+}
+.choices {
+    width: 350px;
+    height: 400px;
+    margin-bottom: 10px;
+}
+.choices th {
+    width: 110px;
+    padding-right: 15px;
+	font-weight: 600;
+    text-align: right;
+}
+.choices input {
+    width: 200px;
+    height: 25px;
+	margin-bottom: 30px;
+    text-align: left;
+}
+
+/*--btnsm영역--*/
+.btns {
+    overflow: hidden;
+    width: 320px;
+    height: 50px;
+    text-align: center;
+	margin-left: 25px;
+    
+}
+.btn {
+    font-weight: 600;
+	width: 70px;
+    height: 40px;
+	padding: 10px;
+    margin-left: 15px;
+	border: none;
+	font-size: 15px;
+    border-radius: 10%;
+}
+/*버튼에 마우스를 올려놓았을 때*/
+.btn:hover {
+	background-color: rgb(211, 211, 211);
+}
+/*버튼을 누른 시간*/
+.btn:active {
+	color: #fff;
+}
+/*버튼의 역할에 맞춰 색상 나누기*/
+.btn {
+	background-color: rgb(189, 189, 189);
+}
+
